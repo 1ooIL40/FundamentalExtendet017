@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13. Increasing Sequence of 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14. Equal Sequence of Elements in Array", "14. Equal Sequence of Elements in Array\14. Equal Sequence of Elements in Array.csproj", "{7DD0CDE1-4976-47B5-AB15-3E68AC7DB59E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15. Count of Capital Letters in Array", "15. Count of Capital Letters in Array\15. Count of Capital Letters in Array.csproj", "{0888379B-4700-4730-A38A-88125634102D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{7DD0CDE1-4976-47B5-AB15-3E68AC7DB59E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DD0CDE1-4976-47B5-AB15-3E68AC7DB59E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DD0CDE1-4976-47B5-AB15-3E68AC7DB59E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0888379B-4700-4730-A38A-88125634102D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0888379B-4700-4730-A38A-88125634102D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0888379B-4700-4730-A38A-88125634102D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0888379B-4700-4730-A38A-88125634102D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
