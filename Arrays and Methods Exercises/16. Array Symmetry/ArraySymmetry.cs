@@ -19,7 +19,7 @@
             for (int i = 0; i < len; i++)
             {
                 var first = text[i];
-                var second = text[text.Length - i - 1];
+                var second = text[text.Length - 1 - i];
 
                 if(first != second)
                 {
