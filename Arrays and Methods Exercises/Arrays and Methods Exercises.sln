@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. String Encryption", "08
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Largest Element in Array", "09. Largest Element in Array\09. Largest Element in Array.csproj", "{A2D35E9E-7587-4B00-8E36-DE393A10401F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Count of Negative Elements in Array", "10. Count of Negative Elements in Array\10. Count of Negative Elements in Array.csproj", "{E48F5FB9-D3B3-42F1-9B63-FBCA5182B44C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{A2D35E9E-7587-4B00-8E36-DE393A10401F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2D35E9E-7587-4B00-8E36-DE393A10401F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2D35E9E-7587-4B00-8E36-DE393A10401F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E48F5FB9-D3B3-42F1-9B63-FBCA5182B44C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E48F5FB9-D3B3-42F1-9B63-FBCA5182B44C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E48F5FB9-D3B3-42F1-9B63-FBCA5182B44C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E48F5FB9-D3B3-42F1-9B63-FBCA5182B44C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
