@@ -22,7 +22,6 @@
 
             var result = numToString[numToString.Length - index];
 
-
             return int.Parse(result.ToString());
         }
     }
