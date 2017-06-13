@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Nth Digit", "04. Nth Di
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Integer to Base", "05. Integer to Base\05. Integer to Base.csproj", "{BCBFB5D0-BEC5-41D7-A04A-9E6A6BCF4B41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Notifications", "06. Notifications\06. Notifications.csproj", "{3316F8A2-CF66-407F-A7E5-FFFDD5363D5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BCBFB5D0-BEC5-41D7-A04A-9E6A6BCF4B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCBFB5D0-BEC5-41D7-A04A-9E6A6BCF4B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCBFB5D0-BEC5-41D7-A04A-9E6A6BCF4B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3316F8A2-CF66-407F-A7E5-FFFDD5363D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3316F8A2-CF66-407F-A7E5-FFFDD5363D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3316F8A2-CF66-407F-A7E5-FFFDD5363D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3316F8A2-CF66-407F-A7E5-FFFDD5363D5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
