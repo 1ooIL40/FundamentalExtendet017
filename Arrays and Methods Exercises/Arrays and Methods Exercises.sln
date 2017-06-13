@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14. Equal Sequence of Eleme
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15. Count of Capital Letters in Array", "15. Count of Capital Letters in Array\15. Count of Capital Letters in Array.csproj", "{0888379B-4700-4730-A38A-88125634102D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16. Array Symmetry", "16. Array Symmetry\16. Array Symmetry.csproj", "{4DC02C67-C22F-4F15-90CC-7C65E65DF368}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{0888379B-4700-4730-A38A-88125634102D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0888379B-4700-4730-A38A-88125634102D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0888379B-4700-4730-A38A-88125634102D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DC02C67-C22F-4F15-90CC-7C65E65DF368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC02C67-C22F-4F15-90CC-7C65E65DF368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC02C67-C22F-4F15-90CC-7C65E65DF368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC02C67-C22F-4F15-90CC-7C65E65DF368}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
