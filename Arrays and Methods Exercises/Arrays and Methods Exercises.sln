@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Numbers to Words", "07.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. String Encryption", "08. String Encryption\08. String Encryption.csproj", "{AFFF0164-6664-4230-AB08-513156B1564A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Largest Element in Array", "09. Largest Element in Array\09. Largest Element in Array.csproj", "{A2D35E9E-7587-4B00-8E36-DE393A10401F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{AFFF0164-6664-4230-AB08-513156B1564A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFFF0164-6664-4230-AB08-513156B1564A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFFF0164-6664-4230-AB08-513156B1564A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2D35E9E-7587-4B00-8E36-DE393A10401F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2D35E9E-7587-4B00-8E36-DE393A10401F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2D35E9E-7587-4B00-8E36-DE393A10401F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2D35E9E-7587-4B00-8E36-DE393A10401F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
