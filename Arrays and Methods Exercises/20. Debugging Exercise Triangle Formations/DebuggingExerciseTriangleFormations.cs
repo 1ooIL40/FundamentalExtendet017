@@ -29,7 +29,7 @@
 
                 if (rightConditionOne)
                 {
-                    Console.WriteLine("Triangle has a right angle between sides a and b.");
+                    Console.WriteLine("Triangle has a right angle between sides a and b");
                 }
                 else if (rightConditionTwo)
                 {
@@ -41,7 +41,7 @@
                 }
                 else
                 {
-                    Console.WriteLine("Triangle has no right angles.");
+                    Console.WriteLine("Triangle has no right angles");
                 }
             }
             else
