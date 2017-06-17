@@ -8,9 +8,6 @@ namespace _06.Power_Plants
     {
         public static void Main()
         {
-            //var text = "1 2 3 4";
-            //var text = "3 3 3 3";
-            //var text = "10409 32 2";
             var powerLevel = Console.ReadLine()
                 .Split(new char[] { ' ' },
                 StringSplitOptions.RemoveEmptyEntries)
