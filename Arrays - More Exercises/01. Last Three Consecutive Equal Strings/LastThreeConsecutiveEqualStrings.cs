@@ -11,6 +11,7 @@
             var words = Console.ReadLine()
                 .Split(' ')
                 .ToList();
+
             TakeLastThreeEqualWords(words);
         }
 

@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Last Three Consecutive Equal Strings", "01. Last Three Consecutive Equal Strings\01. Last Three Consecutive Equal Strings.csproj", "{87B3D53A-2C79-42B1-B77C-4790BC9A0677}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Array Elements Equal to Their Index", "02. Array Elements Equal to Their Index\02. Array Elements Equal to Their Index.csproj", "{9FBF99AE-DA17-4F4F-B5F3-64F0157708D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Phonebook", "03. Phonebook\03. Phonebook.csproj", "{2EE1BA46-596A-4521-A473-DACFB51E8D16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{87B3D53A-2C79-42B1-B77C-4790BC9A0677}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87B3D53A-2C79-42B1-B77C-4790BC9A0677}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87B3D53A-2C79-42B1-B77C-4790BC9A0677}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FBF99AE-DA17-4F4F-B5F3-64F0157708D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FBF99AE-DA17-4F4F-B5F3-64F0157708D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FBF99AE-DA17-4F4F-B5F3-64F0157708D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FBF99AE-DA17-4F4F-B5F3-64F0157708D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EE1BA46-596A-4521-A473-DACFB51E8D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EE1BA46-596A-4521-A473-DACFB51E8D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EE1BA46-596A-4521-A473-DACFB51E8D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EE1BA46-596A-4521-A473-DACFB51E8D16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
