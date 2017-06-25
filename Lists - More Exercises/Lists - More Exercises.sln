@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Camels Back", "03. Came
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Ununion Lists", "04. Ununion Lists\04. Ununion Lists.csproj", "{635E5BBF-4542-4B31-A949-E5FD4AB6FC62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Note Statistics", "05. Note Statistics\05. Note Statistics.csproj", "{49239017-EECB-4215-A3DC-0D71480B4F77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{635E5BBF-4542-4B31-A949-E5FD4AB6FC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{635E5BBF-4542-4B31-A949-E5FD4AB6FC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{635E5BBF-4542-4B31-A949-E5FD4AB6FC62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49239017-EECB-4215-A3DC-0D71480B4F77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49239017-EECB-4215-A3DC-0D71480B4F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49239017-EECB-4215-A3DC-0D71480B4F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49239017-EECB-4215-A3DC-0D71480B4F77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
