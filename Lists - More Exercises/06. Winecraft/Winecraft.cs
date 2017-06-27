@@ -14,95 +14,110 @@
                 .Select(int.Parse)
                 .ToList();
 
-            var rounds = int.Parse(Console.ReadLine());
+            var n = int.Parse(Console.ReadLine());
 
-            var stopWinecraft = grapes;
+            var isGrapesBiggerThenN = GrapesBiggerThenN(grapes, n);
 
 
-            while (stopWinecraft.Count >= rounds)
+
+
+            do
             {
-
-                for (int i = 0; i < rounds; i++)
+                for (int i = 0; i < n; i++)
                 {
-                    //Add one grape for each i
-                    grapes = addGrapes(grapes);
-
-                    //Feed the  Greater grape
-                    grapes = GrapeStealers(grapes);
+                    grapes = Bloom(grapes);
                 }
 
-                //Set the grapes who ar less then rounds to 0
-                grapes = SetLowerGrapesToZero(grapes, rounds);
+                grapes = KillGrapesLowerOrEqualThan(grapes, n);
 
 
-                stopWinecraft = grapes
-                    .Where(g => g > rounds)
-                    .ToList();
+                isGrapesBiggerThenN = GrapesBiggerThenN(grapes, n);
+
             }
-            //For final print
+            while (isGrapesBiggerThenN);
+
             grapes = grapes
-                .Where(g => g > rounds)
+                .Where(g => g > n)
                 .ToList();
 
             Console.WriteLine(string.Join(" ", grapes));
         }
 
-        static List<int> GrapeStealers(List<int> grapes)
+        static bool GrapesBiggerThenN(List<int> grapes, int n)
         {
-            for (int i = 1; i < grapes.Count - 1; i++)
-            {
-                var neighborOne = grapes[i - 1];
-                var greaterGrape = grapes[i];
-                var neighborTwo = grapes[i + 1];
+            grapes = grapes
+                .Where(g => g > n)
+                .ToList();
 
-                if(greaterGrape > neighborOne && 
-                    greaterGrape > neighborTwo)
-                {
-                    if (neighborOne > 0 && neighborTwo > 0) //Chek did we have Greater grape
-                    {
-                        grapes[i - 1] -= 2;
-                        grapes[i + 1] -= 2;
-                        grapes[i] += 2;
-                    }else if (neighborOne > 0 && neighborTwo == 0) //Check if one of the neighbors are empty == 0
-                    {
-                        grapes[i - 1] -= 2;
-                        grapes[i] += 1;
-                    }
-                    else
-                    {
-                        grapes[i + 1] -= 2;
-                        grapes[i] += 1;
-                    }
-                }
-            }
-            
-            return grapes;
+            return grapes.Count() >= n;
         }
 
-        static List<int> SetLowerGrapesToZero(List<int> grapes, int rounds)
+        static List<int> KillGrapesLowerOrEqualThan(List<int> grapes, int n)
         {
-
             for (int i = 0; i < grapes.Count; i++)
             {
-                if(grapes[i] <= rounds)
+                if(grapes[i] <= n)
                 {
                     grapes[i] = 0;
                 }
             }
-
             return grapes;
         }
 
-        static List<int> addGrapes(List<int> grapes)
+        static List<int> Bloom(List<int> grapes)
         {
+
+            //Increment the grapse
             for (int i = 0; i < grapes.Count; i++)
             {
                 if (grapes[i] > 0)
                 {
-                    grapes[i] += 1;
+                    grapes[i]++;
                 }
             }
+
+            //If There have Greater grapse do logic
+            for (int i = 0; i < grapes.Count; i++)
+            {
+                
+                if (i > 0 && i < grapes.Count - 1)
+                {
+                    var first = grapes[i - 1];
+                    var greater = grapes[i];
+                    var second = grapes[i + 1];
+
+                    var isThereGreaterGrapes = CheckForGreaterGrapes(first, greater, second);
+
+
+                    if (isThereGreaterGrapes)
+                    {
+                        if (first == 0 && second > 0)
+                        {
+                            grapes[i]++;
+                            grapes[i + 1] -= 2;
+                        }
+                        if (first > 0 && second == 0)
+                        {
+                            grapes[i]++;
+                            grapes[i - 1] -= 2;
+                        }
+                        if (first > 0 && second > 0)
+                        {
+                            grapes[i - 1] -= 2;
+                            grapes[i] += 2;
+                            grapes[i + 1] -= 2;
+                        }
+                    }
+                }
+            }
+
             return grapes;
+
+        }
+
+        static bool CheckForGreaterGrapes(int firsr, int greater, int second)
+        {
+            return (firsr < greater && second < greater);
         }
     }
 }
