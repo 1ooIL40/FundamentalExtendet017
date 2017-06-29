@@ -6,142 +6,151 @@
 
     public class Winecraft
     {
-        public static void Main()
+        static void Main()
         {
-            var grapes = Console.ReadLine()
+
+            int[] grapes = Console.ReadLine()
                 .Split(new char[] { ' ' },
                 StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
-                .ToList();
+                .ToArray();
 
-            var n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine());
 
-            var stopWinecraft = grapes;
-            
-            
+            int grapesCounter = 0;
+
+
             do
             {
-
+                //Grouwing days
                 for (int i = 0; i < n; i++)
                 {
-                    //Add one grape for each i
-                    addGrapes(grapes);
-
-                    //Feed the  Greater grape
-                    GrapeStealers(grapes);
+                    GrapesLvlChange(grapes);
                 }
 
-                //Set the grapes who ar less then rounds to 0
-                SetLowerGrapesToZero(grapes, n);
+                KillGrapesLowerOrEqualTo(n, grapes);
 
-
-                stopWinecraft = grapes
+                grapesCounter = grapes
                     .Where(g => g > n)
-                    .ToList();
-            }
-            while (stopWinecraft.Count >= n);
+                    .ToArray()
+                    .Length;
 
-            //For final print
+            }
+            while (grapesCounter >= n);
+
             grapes = grapes
                 .Where(g => g > n)
-                .ToList();
+                .ToArray();
 
             Console.WriteLine(string.Join(" ", grapes));
+
         }
 
-        //Decrement the neighbors of the greater grape
-        static void GrapeStealers(List<int> grapes)
-        {
-            for (int i = 1; i < grapes.Count - 1; i++)
-            {
-                var neighborOne = grapes[i - 1];
-                var greaterGrape = grapes[i];
-                var neighborTwo = grapes[i + 1];
 
-                bool isGreater = FindGreaterGrapse(neighborOne, greaterGrape, neighborTwo);
+        //Add or remove a lvl from grapes deppend of the grape Type
+        static void GrapesLvlChange(int[] grapes)
+        {
+            HashSet<int> lesserGrapesIndexes = new HashSet<int>();
+
+            for (int i = 1; i < grapes.Length - 1; i++)
+            {
+
+                int first = grapes[i - 1];
+                int greatGrape = grapes[i];
+                int last = grapes[i + 1];
+
+                bool isGreater = GreateGrape(first, greatGrape, last);
+
 
                 if (isGreater)
                 {
-                    if (neighborOne > 0 && neighborTwo > 0)
+                    lesserGrapesIndexes.Add(i - 1);
+                    lesserGrapesIndexes.Add(i + 1);
+                }
+            }
+            StealGrapeFromLesserGrapes(grapes);
+
+            LvlUpGrapesDifferendThenLessarGrape(grapes, lesserGrapesIndexes);
+
+        }
+
+        //Steal 1 lvl from lesser grapes
+        private static void StealGrapeFromLesserGrapes(int[] grapes)
+        {
+            for (int i = 1; i < grapes.Length - 1; i++)
+            {
+                int first = grapes[i - 1];
+                int greater = grapes[i];
+                int last = grapes[i + 1];
+
+                bool isGreater = GreateGrape(first, greater, last);
+
+                int lvlUpGreaterGrape = 0;
+
+                if (isGreater)
+                {
+                    if (first > 0 && last <= 0)
                     {
-                        grapes[i - 1] -= 1;
-                        grapes[i + 1] -= 1;
-                        grapes[i] += 2;
+                        grapes[i - 1]--;
+                        lvlUpGreaterGrape++;
                     }
-                    //Check if one of the neighbors are empty == 0
-                    if (neighborOne > 0 && neighborTwo == 0) 
+                    if (first <= 0 && last > 0)
                     {
-                        grapes[i - 1] -= 1;
-                        grapes[i] += 1;
+                        grapes[i + 1]--;
+                        lvlUpGreaterGrape++;
                     }
-                    if (neighborOne == 0 && neighborTwo > 0)
+                    if (first > 0 && last > 0)
                     {
-                        grapes[i + 1] -= 1;
-                        grapes[i] += 1;
+                        grapes[i - 1]--;
+                        grapes[i + 1]--;
+                        lvlUpGreaterGrape += 2;
                     }
+
+                    grapes[i] += lvlUpGreaterGrape;
+
                 }
             }
         }
 
-        //Make grapes lower or equal then rounds == 0
-        static void SetLowerGrapesToZero(List<int> grapes, int rounds)
+        //Add 1 lvl to the grapes who are differend then lesser
+        static void LvlUpGrapesDifferendThenLessarGrape(int[] grapes,
+            HashSet<int> lesserGrapesIndexes)
+        {
+            for (int i = 0; i < grapes.Length - 1; i++)
+            {
+                foreach (var index in lesserGrapesIndexes)
+                {
+                    if (index == i)
+                    {
+                        i++;
+                    }
+                }
+
+                if (grapes[i] > 0)
+                {
+                    grapes[i]++;
+                }
+            }
+        }
+
+        //Check for Greater Grapes
+        static bool GreateGrape(int first, int great, int last)
         {
 
-            for (int i = 0; i < grapes.Count; i++)
+            return (first < great && great > last);
+        }
+
+        //Set lower then N grapes to 0
+        static void KillGrapesLowerOrEqualTo(int n, int[] grapes)
+        {
+
+            for (int i = 0; i < grapes.Length; i++)
             {
-                if (grapes[i] <= rounds)
+                if (grapes[i] < n)
                 {
                     grapes[i] = 0;
                 }
             }
-        }
-
-        //LvlUp Grapes
-        static void addGrapes(List<int> grapes)
-        {
-            List<int> lesserGrapeIndex = new List<int>();
-
-            for (int i = 0; i < grapes.Count; i++)
-            {
-
-                if(i > 0 && i < grapes.Count - 1)
-                {
-                    int first = grapes[i - 1];
-                    int greateGrapse = grapes[i];
-                    int last = grapes[i + 1];
-
-                    bool isGreater = FindGreaterGrapse(first, greateGrapse, last);
-
-                    if (isGreater)
-                    {
-                        lesserGrapeIndex.Add(i - 1);
-                        lesserGrapeIndex.Add(i + 1);
-                    }
-                }
-            }
-
-            //lesserGrapeIndex = lesserGrapeIndex
-            //    .Distinct()
-            //    .ToList();
-
-            //Lvl Up grapes who are not lesser
-            for (int i = 0; i < grapes.Count; i++)
-            {
-                for (int cnt = 0; cnt < lesserGrapeIndex.Count; cnt++)
-                {
-                    if(i == lesserGrapeIndex[cnt])
-                    {
-                        grapes[i]--;
-                        break;
-                    }
-                }
-                grapes[i]++;
-            }
-        }
-
-        static bool FindGreaterGrapse(int first, int greateGrapse, int last)
-        {
-            return (first < greateGrapse && greateGrapse > last);
         }
     }
 }
