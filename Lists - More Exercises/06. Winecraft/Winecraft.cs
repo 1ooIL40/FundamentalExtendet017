@@ -52,14 +52,14 @@
         {
             HashSet<int> lesserGrapesIndexes = new HashSet<int>();
 
-            for (int i = 1; i < grapes.Length - 1; i++)
+            for (int i = 0; i < grapes.Length; i++)
             {
 
-                int first = grapes[i - 1];
-                int greatGrape = grapes[i];
-                int last = grapes[i + 1];
+                //int first = grapes[i - 1];
+                //int greatGrape = grapes[i];
+                //int last = grapes[i + 1];
 
-                bool isGreater = GreateGrape(first, greatGrape, last);
+                bool isGreater = GreateGrape(i, grapes);
 
 
                 if (isGreater)
@@ -77,37 +77,52 @@
         //Steal 1 lvl from lesser grapes
         private static void StealGrapeFromLesserGrapes(int[] grapes)
         {
-            for (int i = 1; i < grapes.Length - 1; i++)
+            for (int i = 0; i < grapes.Length; i++)
             {
-                int first = grapes[i - 1];
-                int greater = grapes[i];
-                int last = grapes[i + 1];
+                //int first = grapes[i - 1];
+                //int greater = grapes[i];
+                //int last = grapes[i + 1];
 
-                bool isGreater = GreateGrape(first, greater, last);
+                bool isGreater = GreateGrape(i, grapes);
 
-                int lvlUpGreaterGrape = 0;
+                //int lvlUpGreaterGrape = 0;
 
                 if (isGreater)
                 {
-                    if (first > 0 && last <= 0)
+                    int first = grapes[i - 1];
+                    int greater = grapes[i];
+                    int last = grapes[i + 1];
+                    //if (first > 0 && last <= 0)
+                    //{
+                    //    grapes[i - 1]--;
+                    //    lvlUpGreaterGrape++;
+                    //}
+                    //if (first <= 0 && last > 0)
+                    //{
+                    //    grapes[i + 1]--;
+                    //    lvlUpGreaterGrape++;
+                    //}
+                    //if (first > 0 && last > 0)
+                    //{
+                    //    grapes[i - 1]--;
+                    //    grapes[i + 1]--;
+                    //    lvlUpGreaterGrape += 2;
+                    //}
+
+                    //grapes[i] += lvlUpGreaterGrape;
+                    //
+
+                    // ---тук намаля слабите и присвоява стоиностите им на големите
+                    if (first > 0)
                     {
                         grapes[i - 1]--;
-                        lvlUpGreaterGrape++;
+                        grapes[i]++;
                     }
-                    if (first <= 0 && last > 0)
+                    if (last > 0)
                     {
                         grapes[i + 1]--;
-                        lvlUpGreaterGrape++;
+                        grapes[i]++;
                     }
-                    if (first > 0 && last > 0)
-                    {
-                        grapes[i - 1]--;
-                        grapes[i + 1]--;
-                        lvlUpGreaterGrape += 2;
-                    }
-
-                    grapes[i] += lvlUpGreaterGrape;
-
                 }
             }
         }
@@ -116,17 +131,18 @@
         static void LvlUpGrapesDifferendThenLessarGrape(int[] grapes,
             HashSet<int> lesserGrapesIndexes)
         {
-            for (int i = 0; i < grapes.Length - 1; i++)
+            for (int i = 0; i < grapes.Length; i++)
             {
-                foreach (var index in lesserGrapesIndexes)
-                {
-                    if (index == i)
-                    {
-                        i++;
-                    }
-                }
+                //foreach (var index in lesserGrapesIndexes)
+                //{
+                //    if (index == i)
+                //    {
+                //        i++;
+                //    }
+                //}
 
-                if (grapes[i] > 0)
+                // ---увеличаваш всички които не са слаби!---
+                if (grapes[i] > 0 && !lesserGrapesIndexes.Contains(i))
                 {
                     grapes[i]++;
                 }
@@ -134,10 +150,17 @@
         }
 
         //Check for Greater Grapes
-        static bool GreateGrape(int first, int great, int last)
+        static bool GreateGrape(int index, int[] grapes)
         {
+            // ---метода проверява дали грозда от индекса може да е по-голям---
+            // ---и след това дали наистина е по-голям
+            // ---така циклите могат да си обикалят по целия масив
+            if (index > 0 && index < grapes.Length - 1)
+            {
+                return grapes[index - 1] < grapes[index] && grapes[index + 1] < grapes[index];
+            }
+            return false;
 
-            return (first < great && great > last);
         }
 
         //Set lower then N grapes to 0
