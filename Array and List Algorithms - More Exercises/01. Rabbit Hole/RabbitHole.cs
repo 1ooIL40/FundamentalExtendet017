@@ -8,9 +8,6 @@
     {
         public static void Main()
         {
-
-            Console.WriteLine(77 % 5);
-            return;
             List<string> obstacles = Console.ReadLine()
                 .Split(new char[] { ' ' },
                 StringSplitOptions.RemoveEmptyEntries)
@@ -39,11 +36,11 @@
                 switch (command)
                 {
                     case "left":
-                        currentIndex = Math.Abs(currendEnergy - energy) % lenght;
+                        currentIndex = Math.Abs(currentIndex - energy) % lenght;
                         currendEnergy -= energy;
                         break;
                     case "right":
-                        currentIndex = Math.Abs(currendEnergy + energy) % lenght;
+                        currentIndex = Math.Abs(currentIndex+ energy) % lenght;
                         currendEnergy -= energy;
                         break;
                     case "bomb":
