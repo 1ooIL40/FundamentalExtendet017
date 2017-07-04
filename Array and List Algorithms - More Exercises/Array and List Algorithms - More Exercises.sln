@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Mirror Image", "03. Mir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Japanese Roulette", "04. Japanese Roulette\04. Japanese Roulette.csproj", "{FE4B3217-394A-4DA8-AED5-8FFE83387CCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Increasing Crisis", "05. Increasing Crisis\05. Increasing Crisis.csproj", "{E3A36FBF-1A70-40F4-B7F8-3E882B720DA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FE4B3217-394A-4DA8-AED5-8FFE83387CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE4B3217-394A-4DA8-AED5-8FFE83387CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE4B3217-394A-4DA8-AED5-8FFE83387CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3A36FBF-1A70-40F4-B7F8-3E882B720DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3A36FBF-1A70-40F4-B7F8-3E882B720DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3A36FBF-1A70-40F4-B7F8-3E882B720DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3A36FBF-1A70-40F4-B7F8-3E882B720DA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

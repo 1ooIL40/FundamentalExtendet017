@@ -43,7 +43,6 @@
 
                 string direction = player[1];
                 int strenght = int.Parse(player[0]);
-
                 int endPosition = 0;
 
                 switch (direction)
