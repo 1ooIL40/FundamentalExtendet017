@@ -46,7 +46,7 @@
                 //if the product dosnt exeist
                 if (!shopProductsAndQuantities.ContainsKey(productName))
                 {
-                    Console.WriteLine($"{productName} doesn’t exist");
+                    Console.WriteLine($"{productName} doesn't exist");
                 }
                 else
                 {
