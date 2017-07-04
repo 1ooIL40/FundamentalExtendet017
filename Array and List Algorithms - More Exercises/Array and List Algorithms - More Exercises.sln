@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Japanese Roulette", "04
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Increasing Crisis", "05. Increasing Crisis\05. Increasing Crisis.csproj", "{E3A36FBF-1A70-40F4-B7F8-3E882B720DA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Extremums", "06. Extremums\06. Extremums.csproj", "{CE33B33F-3245-45AF-8036-BB6486FFF146}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{E3A36FBF-1A70-40F4-B7F8-3E882B720DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3A36FBF-1A70-40F4-B7F8-3E882B720DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3A36FBF-1A70-40F4-B7F8-3E882B720DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE33B33F-3245-45AF-8036-BB6486FFF146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE33B33F-3245-45AF-8036-BB6486FFF146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE33B33F-3245-45AF-8036-BB6486FFF146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE33B33F-3245-45AF-8036-BB6486FFF146}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

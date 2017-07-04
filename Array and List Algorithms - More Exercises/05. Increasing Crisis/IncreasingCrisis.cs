@@ -1,91 +1,87 @@
-﻿namespace _05.Increasing_Crisis
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Increasing_Crisis
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-
-    public class IncreasingCrisis
+    class IncreasingCrisis
     {
-        public static void Main()
+        static void Main()
         {
-            int n = int.Parse(Console.ReadLine());
+            // 100/100 judge NM
+            var n = int.Parse(Console.ReadLine());
+            List<int> numbers = new List<int>();
 
-            List<int> crisis = Console.ReadLine()
-                    .Split(new char[] { ' ' },
-                    StringSplitOptions.RemoveEmptyEntries)
-                    .Select(int.Parse)
-                    .ToList();
-
-            for (int i = 1; i < n; i++)
+            for (int input = 0; input < n; input++)
             {
-                List<int> numbers = Console.ReadLine()
-                    .Split(new char[] { ' ' },
-                    StringSplitOptions.RemoveEmptyEntries)
-                    .Select(int.Parse)
-                    .ToList();
+                InsertNumbers(numbers);
+                RemoveNumbers(numbers);
+            }
 
+            Console.WriteLine(string.Join(" ", numbers));
+        }
 
-                //int increasingSequenceChek = numbers[0];
-                //int stopHere = 0;
-                //for (int j = 0; j < numbers.Count - 1; j++)
-                //{
-                //    if(!(increasingSequenceChek < numbers[j + 1]))
-                //    {
-                //        stopHere = j;
-                //    }
-                //}
-
-
-                //TODO
-                int number = numbers[0];
-                int indexToInsert = 0;
-                bool isTrue = false;
-
-                for (int j = 0; j < crisis.Count; j++)
+        private static void RemoveNumbers(List<int> numbers)
+        {
+            for (int i = 0; i < numbers.Count - 1; i++)
+            {
+                if (numbers[i] > numbers[i + 1])
                 {
-                    if(number < crisis[j])
+                    for (int removed = i + 1; removed < numbers.Count; removed++)
                     {
-                        isTrue = true;
-                        indexToInsert = j;
+                        numbers.RemoveAt(removed);
+                        removed--;
+                    }
+                }
+            }
+        }
+
+        public static void InsertNumbers(List<int> numbers)
+        {
+            var inputLines = Console.ReadLine()
+                                .Split(' ')
+                                .Select(int.Parse)
+                                .ToList();
+
+            bool Empty = numbers.Count == 0 || numbers[numbers.Count - 1] <= inputLines[0];
+
+            if (Empty)
+            {
+                for (int i = 0; i < inputLines.Count; i++)
+                {
+                    numbers.Add(inputLines[i]);
+                }
+            }
+            else
+            {
+                int positionStart = Position(numbers, inputLines);
+                var positionEnd = positionStart + inputLines.Count;
+                var count = 0;
+                for (int position = positionStart; position < positionEnd; position++)
+                {
+                    numbers.Insert(position, inputLines[count]);
+                    count++;
+                    if (numbers[position] > numbers[position + 1])
+                    {
                         break;
                     }
                 }
+            }
+        }
 
-                if (!isTrue)
+        public static int Position(List<int> numbers, List<int> inputLines)
+        {
+            var positionStart = 0;
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] > inputLines[0])
                 {
-                    indexToInsert = crisis.Count();
-                    isTrue = true;
+                    positionStart = i;
+                    break;
                 }
-
-
-                if (isTrue)
-                {
-                    for (int insr = numbers.Count - 1; insr >= 0; insr--)
-                    {
-                        crisis.Insert(indexToInsert, numbers[insr]);
-                    }
-                }
-
-                //TODO
-                int lastCorrectIndexSequence = 0;
-                for (int cnt = 0; cnt < crisis.Count - 1; cnt++)
-                {
-                    if(crisis[cnt] > crisis[cnt + 1])
-                    {
-                        lastCorrectIndexSequence = cnt;
-                    }
-                }
-
-                if(lastCorrectIndexSequence > 0)
-                {
-                    crisis = crisis
-                        .Take(lastCorrectIndexSequence + 1)
-                        .ToList();
-                }
-
             }
 
-            Console.WriteLine(string.Join(" ", crisis));
+            return positionStart;
         }
     }
 }
