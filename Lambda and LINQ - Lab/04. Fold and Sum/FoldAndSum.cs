@@ -39,7 +39,6 @@
             {
                 Console.Write($"{topPart[i] + bottomPart[i]} ");
             }
-            //Console.WriteLine($"{string.Join(" ",topPart)}");
         }
     }
 }
