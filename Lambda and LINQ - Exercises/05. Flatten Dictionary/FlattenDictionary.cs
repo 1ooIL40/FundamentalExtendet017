@@ -23,9 +23,7 @@
                     string type = tokens[0];
                     string mark = tokens[1];
                     string model = tokens[2];
-
-                    //TODO
-
+                    
                     if (!flattenDict.ContainsKey(type))
                     {
                         flattenDict[type] = new Dictionary<string, string>();
@@ -46,6 +44,7 @@
                 inputLine = Console.ReadLine();
             }
 
+            //Order the first keys ---> type of the product
             flattenDict = flattenDict
                 .OrderByDescending(k => k.Key.Length)
                 .ToDictionary(k => k.Key, v => v.Value);
@@ -56,7 +55,7 @@
             {
                 Console.WriteLine(type.Key);
 
-                var resultValues = type.Value
+                var notFlatteValues = type.Value
                     .Where(v => v.Value != string.Empty)
                     .ToDictionary(k => k.Key, v => v.Value)
                     .OrderBy(k => k.Key.Length)
@@ -67,7 +66,7 @@
                     .ToDictionary(k => k.Key, v => v.Value);
                 int index = 1;
 
-                foreach (var mark in resultValues)
+                foreach (var mark in notFlatteValues)
                 {
 
                     Console.WriteLine($"{index}. {mark.Key} - {mark.Value}");
