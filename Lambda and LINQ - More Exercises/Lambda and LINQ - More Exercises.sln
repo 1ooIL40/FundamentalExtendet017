@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Array Data", "01. Array
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. String Decryption", "02. String Decryption\02. String Decryption.csproj", "{5B56CD92-8ECE-49B7-B485-F7ABCC53B054}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Camping", "03. Camping\03. Camping.csproj", "{877A982A-CD0C-4D0E-8305-66B27C315E1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5B56CD92-8ECE-49B7-B485-F7ABCC53B054}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B56CD92-8ECE-49B7-B485-F7ABCC53B054}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B56CD92-8ECE-49B7-B485-F7ABCC53B054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{877A982A-CD0C-4D0E-8305-66B27C315E1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{877A982A-CD0C-4D0E-8305-66B27C315E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{877A982A-CD0C-4D0E-8305-66B27C315E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{877A982A-CD0C-4D0E-8305-66B27C315E1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
