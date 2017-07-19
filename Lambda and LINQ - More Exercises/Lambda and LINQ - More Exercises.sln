@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Most Valued Customer", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Lambada Expressions", "05. Lambada Expressions\05. Lambada Expressions.csproj", "{C1DD3547-8322-428B-B3F0-5CB28799274F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Ordered Banking System", "06. Ordered Banking System\06. Ordered Banking System.csproj", "{F6CFF7B2-0798-4FCF-A2CA-C2D0E06941AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. LINQuistics", "07. LINQuistics\07. LINQuistics.csproj", "{4ABE9E12-253A-465C-9285-05F25F7EC437}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{C1DD3547-8322-428B-B3F0-5CB28799274F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1DD3547-8322-428B-B3F0-5CB28799274F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1DD3547-8322-428B-B3F0-5CB28799274F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6CFF7B2-0798-4FCF-A2CA-C2D0E06941AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6CFF7B2-0798-4FCF-A2CA-C2D0E06941AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6CFF7B2-0798-4FCF-A2CA-C2D0E06941AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6CFF7B2-0798-4FCF-A2CA-C2D0E06941AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ABE9E12-253A-465C-9285-05F25F7EC437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ABE9E12-253A-465C-9285-05F25F7EC437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ABE9E12-253A-465C-9285-05F25F7EC437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ABE9E12-253A-465C-9285-05F25F7EC437}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
