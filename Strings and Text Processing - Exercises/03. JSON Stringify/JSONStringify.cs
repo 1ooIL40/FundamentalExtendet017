@@ -46,11 +46,11 @@
             }
             result = result
                 .Replace(result.Last().ToString(),"]");
-            Console.WriteLine($"[{result}");
 
+            Console.WriteLine($"[{result}");
         }
     }
-
+     
     public class Student
     {
         public string Name { get; set; }
