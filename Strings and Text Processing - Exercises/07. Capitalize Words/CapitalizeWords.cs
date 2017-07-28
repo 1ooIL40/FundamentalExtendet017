@@ -39,7 +39,7 @@
                     result.Add(newWord);
                 }
 
-                Console.WriteLine($"{string.Join(",       s", result)}");
+                Console.WriteLine($"{string.Join(", ", result)}");
 
                 inputLine = Console.ReadLine().ToLower();
             }
