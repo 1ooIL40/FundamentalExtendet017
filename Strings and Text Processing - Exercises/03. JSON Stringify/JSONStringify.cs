@@ -45,9 +45,9 @@
                     string.Join(", ",student.Grades)));
             }
             result = result
-                .Replace(result.Last().ToString(),"]");
+                .Remove(result.Length - 1);
 
-            Console.WriteLine($"[{result}");
+            Console.WriteLine($"[{result}]");
         }
     }
      
