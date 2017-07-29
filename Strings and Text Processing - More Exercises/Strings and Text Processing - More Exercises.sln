@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Serialize String", "03.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Stateless", "06. Stateless\06. Stateless.csproj", "{B26D02BD-9244-4364-B277-99D18C12C461}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Pyramidic", "07. Pyramidic\07. Pyramidic.csproj", "{6DC2DC04-1DF1-42B6-AF42-497BE06A6577}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B26D02BD-9244-4364-B277-99D18C12C461}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B26D02BD-9244-4364-B277-99D18C12C461}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B26D02BD-9244-4364-B277-99D18C12C461}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC2DC04-1DF1-42B6-AF42-497BE06A6577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC2DC04-1DF1-42B6-AF42-497BE06A6577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC2DC04-1DF1-42B6-AF42-497BE06A6577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC2DC04-1DF1-42B6-AF42-497BE06A6577}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
