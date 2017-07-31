@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Pyramidic", "07. Pyrami
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Nilapdromes", "08. Nilapdromes\08. Nilapdromes.csproj", "{9B256854-25C7-447F-91E8-73E3DF69ECD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Value of a String", "01. Value of a String\01. Value of a String.csproj", "{D75B33F2-BA17-42A0-B9E7-31CF9B9917AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9B256854-25C7-447F-91E8-73E3DF69ECD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B256854-25C7-447F-91E8-73E3DF69ECD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B256854-25C7-447F-91E8-73E3DF69ECD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D75B33F2-BA17-42A0-B9E7-31CF9B9917AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D75B33F2-BA17-42A0-B9E7-31CF9B9917AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D75B33F2-BA17-42A0-B9E7-31CF9B9917AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D75B33F2-BA17-42A0-B9E7-31CF9B9917AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
