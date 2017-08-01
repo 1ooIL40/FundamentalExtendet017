@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Nilapdromes", "08. Nila
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Value of a String", "01. Value of a String\01. Value of a String.csproj", "{D75B33F2-BA17-42A0-B9E7-31CF9B9917AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Diamond Problem", "02. Diamond Problem\02. Diamond Problem.csproj", "{3762B8C4-85C7-4797-A12D-6F948D4A2941}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Deserialize String", "04. Deserialize String\04. Deserialize String.csproj", "{7AFF5CFA-1C72-4CD6-AF30-CA069FB6A764}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. String Commander", "05. String Commander\05. String Commander.csproj", "{77B6EFD3-604F-48D3-9589-518224CCC582}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +45,18 @@ Global
 		{D75B33F2-BA17-42A0-B9E7-31CF9B9917AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D75B33F2-BA17-42A0-B9E7-31CF9B9917AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D75B33F2-BA17-42A0-B9E7-31CF9B9917AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3762B8C4-85C7-4797-A12D-6F948D4A2941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3762B8C4-85C7-4797-A12D-6F948D4A2941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3762B8C4-85C7-4797-A12D-6F948D4A2941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3762B8C4-85C7-4797-A12D-6F948D4A2941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AFF5CFA-1C72-4CD6-AF30-CA069FB6A764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AFF5CFA-1C72-4CD6-AF30-CA069FB6A764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AFF5CFA-1C72-4CD6-AF30-CA069FB6A764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AFF5CFA-1C72-4CD6-AF30-CA069FB6A764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77B6EFD3-604F-48D3-9589-518224CCC582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B6EFD3-604F-48D3-9589-518224CCC582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B6EFD3-604F-48D3-9589-518224CCC582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B6EFD3-604F-48D3-9589-518224CCC582}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,7 +13,7 @@
             string possibilities = Console.ReadLine().ToUpper();
             int totalSum = 0;
 
-            if(possibilities.First() == 'L')
+            if(possibilities == "LOWERCASE")
             {
                 totalSum = SumOfLowerCaseLetters(letters);
             }
