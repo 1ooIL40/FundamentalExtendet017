@@ -1,4 +1,6 @@
-﻿namespace _02.Diamond_Problem
+﻿ //85/100 Грешен отговор
+
+namespace _02.Diamond_Problem
 {
     using System;
     using System.Collections.Generic;
@@ -61,21 +63,23 @@
         {
             List<string> result = new List<string>();
 
-            string[] tokens = inputLine
+            int start = inputLine.IndexOf(startWith);
+            int end = inputLine.LastIndexOf(endWith);
+            inputLine = inputLine.Substring(start, (end - start + 1));
+
+            string[] tokes = inputLine
                 .Split(new char[] { startWith },
                 StringSplitOptions.RemoveEmptyEntries);
 
-            foreach (var diamond in tokens)
+            foreach (var d in tokes)
             {
-                if (diamond.Contains(endWith))
+                if (d.Contains(endWith))
                 {
-                    //var lastIndex = diamond.LastIndexOf(startWith);
-                    var index = diamond.IndexOf(endWith);
-
-                    string diamondToAdd = diamond.Substring(index).Trim();
-                    result.Add(diamondToAdd);
+                    string diamond = d.Replace(endWith, ' ');
+                    result.Add(diamond.Trim());
                 }
             }
+
 
             return result;
         }
