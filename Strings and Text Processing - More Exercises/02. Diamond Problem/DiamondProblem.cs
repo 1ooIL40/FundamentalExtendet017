@@ -1,6 +1,4 @@
-﻿ //85/100 Грешен отговор
-
-namespace _02.Diamond_Problem
+﻿namespace _02.Diamond_Problem
 {
     using System;
     using System.Collections.Generic;
