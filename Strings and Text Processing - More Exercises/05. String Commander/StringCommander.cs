@@ -1,4 +1,8 @@
-﻿namespace _05.String_Commander
+﻿
+ //80/100 Грешка при изпълнението
+ //100/100 rewrited and fixed
+
+namespace _05.String_Commander
 {
     using System;
     using System.Collections.Generic;
@@ -7,11 +11,11 @@
 
     public class StringCommander
     {
-        public static StringBuilder stringToManipulate = new StringBuilder(Console.ReadLine());
+        public static string stringToManipulate = Console.ReadLine();
 
         public static void Main()
         {
-            
+
             string inputLine = Console.ReadLine();
 
             while (inputLine != "end")
@@ -49,40 +53,32 @@
                 inputLine = Console.ReadLine();
             }
 
-            Console.WriteLine(stringToManipulate.ToString());
+            Console.WriteLine(stringToManipulate);
         }
 
-        private static void DeleteFromTo(int start, int end)
+        static void DeleteFromTo(int start, int end)
         {
-            stringToManipulate.Remove(start, end + 1);
+            stringToManipulate = stringToManipulate.Remove(start, end - start + 1);
+
         }
 
-        private static void InsertString(int index, string stringToInsert)
+        static void InsertString(int index, string stringToInsert)
         {
-            stringToManipulate.Insert(index, stringToInsert);
+            stringToManipulate = stringToManipulate.Insert(index, stringToInsert);
         }
 
         static void MoveToTheRight(int times)
         {
-            while (times > 0)
-            {
-                int indexToRemove = stringToManipulate.Length;
-                char lastElement = stringToManipulate[stringToManipulate.Length - 1];
-                stringToManipulate.Remove(indexToRemove - 1, 1);
-                stringToManipulate.Insert(0, lastElement);
-                times--;
-            }
+            times %= stringToManipulate.Length;
+            stringToManipulate = stringToManipulate
+                           .Substring(stringToManipulate.Length - times) + stringToManipulate.Substring(0, stringToManipulate.Length - times);
         }
 
         static void MoveToTheLeft(int times)
         {
-            while (times > 0)
-            {
-                char lastElement = stringToManipulate[0];
-                stringToManipulate.Remove(0, 1);
-                stringToManipulate.Append(lastElement);
-                times--;
-            }
+            times %= stringToManipulate.Length;
+            stringToManipulate = stringToManipulate
+                .Substring(times) + stringToManipulate.Substring(0, times);
         }
     }
 }
