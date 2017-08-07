@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Match Hexadecimal Numbe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Replace a tag", "06. Replace a tag\06. Replace a tag.csproj", "{D5E51206-873A-4FC5-8AA9-8B5983CF6369}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Match Dates", "04. Match Dates\04. Match Dates.csproj", "{D7A7451D-92D1-4C96-9CE4-3F5A5B05CFCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D5E51206-873A-4FC5-8AA9-8B5983CF6369}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5E51206-873A-4FC5-8AA9-8B5983CF6369}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5E51206-873A-4FC5-8AA9-8B5983CF6369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7A7451D-92D1-4C96-9CE4-3F5A5B05CFCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A7451D-92D1-4C96-9CE4-3F5A5B05CFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A7451D-92D1-4C96-9CE4-3F5A5B05CFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A7451D-92D1-4C96-9CE4-3F5A5B05CFCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

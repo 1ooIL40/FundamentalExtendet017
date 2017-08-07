@@ -1,5 +1,4 @@
-﻿
-namespace _06.Replace_a_tag
+﻿namespace _06.Replace_a_tag
 {
     using System;
     using System.Linq;
