@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Replace a tag", "06. Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Match Dates", "04. Match Dates\04. Match Dates.csproj", "{D7A7451D-92D1-4C96-9CE4-3F5A5B05CFCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Match Numbers", "05. Match Numbers\05. Match Numbers.csproj", "{C26F2843-2CF2-4D89-A659-A1E3368CBAA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D7A7451D-92D1-4C96-9CE4-3F5A5B05CFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7A7451D-92D1-4C96-9CE4-3F5A5B05CFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7A7451D-92D1-4C96-9CE4-3F5A5B05CFCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C26F2843-2CF2-4D89-A659-A1E3368CBAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C26F2843-2CF2-4D89-A659-A1E3368CBAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C26F2843-2CF2-4D89-A659-A1E3368CBAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C26F2843-2CF2-4D89-A659-A1E3368CBAA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
