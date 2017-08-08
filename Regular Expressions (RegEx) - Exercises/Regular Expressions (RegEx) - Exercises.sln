@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Cards", "01. Cards\01. Cards.csproj", "{C4BFE5ED-ACCF-449D-A5A4-8875C2253C1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Fish Statistics", "06. Fish Statistics\06. Fish Statistics.csproj", "{018BB355-166B-4918-8EBB-511DF3F7AFCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Word Encounter", "02. Word Encounter\02. Word Encounter.csproj", "{4112383C-3880-4E17-B22C-08862E8491B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4BFE5ED-ACCF-449D-A5A4-8875C2253C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4BFE5ED-ACCF-449D-A5A4-8875C2253C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4BFE5ED-ACCF-449D-A5A4-8875C2253C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4BFE5ED-ACCF-449D-A5A4-8875C2253C1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018BB355-166B-4918-8EBB-511DF3F7AFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018BB355-166B-4918-8EBB-511DF3F7AFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018BB355-166B-4918-8EBB-511DF3F7AFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018BB355-166B-4918-8EBB-511DF3F7AFCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4112383C-3880-4E17-B22C-08862E8491B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4112383C-3880-4E17-B22C-08862E8491B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4112383C-3880-4E17-B22C-08862E8491B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4112383C-3880-4E17-B22C-08862E8491B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
