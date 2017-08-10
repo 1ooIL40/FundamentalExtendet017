@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Grocery Shop", "04. Gro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. SoftUni Messages", "05. SoftUni Messages\05. SoftUni Messages.csproj", "{487A2D2C-B62D-4CD5-B731-670CDF980D90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Happiness Index", "07. Happiness Index\07. Happiness Index.csproj", "{1EA66F6B-2401-4DAD-B8F4-A97504FAD326}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{487A2D2C-B62D-4CD5-B731-670CDF980D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{487A2D2C-B62D-4CD5-B731-670CDF980D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{487A2D2C-B62D-4CD5-B731-670CDF980D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EA66F6B-2401-4DAD-B8F4-A97504FAD326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA66F6B-2401-4DAD-B8F4-A97504FAD326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA66F6B-2401-4DAD-B8F4-A97504FAD326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA66F6B-2401-4DAD-B8F4-A97504FAD326}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
