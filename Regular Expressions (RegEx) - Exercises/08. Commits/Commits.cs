@@ -9,10 +9,10 @@
     {
         public string Hash { get; set; }
         public string Message { get; set; }
-        public string Additions { get; set; }
-        public string Deletions { get; set; }
+        public decimal Additions { get; set; }
+        public decimal Deletions { get; set; }
 
-        public Comites(string hash, string message, string additions, string deletions)
+        public Comites(string hash, string message, decimal additions, decimal deletions)
         {
             this.Hash = hash;
             this.Message = message;
@@ -23,31 +23,32 @@
 
     public class Commits
     {
-
-        public static SortedDictionary<string, SortedDictionary<string, List<Comites>>> usersInfo = new SortedDictionary<string, SortedDictionary<string, List<Comites>>>();
-
+        
         public static void Main()
         {
+            SortedDictionary<string, SortedDictionary<string, List<Comites>>> usersInfo = new SortedDictionary<string, SortedDictionary<string, List<Comites>>>();
+
+            Regex parts = new Regex(@"^https:\/\/github.com\/(?<ussername>[A-Za-z0-9\-]+)\/(?<repoName>[A-Za-z\-_]+)\/commit\/(?<hash>[0-9a-f]{40}),(?<message>[^\n]*),(?<additions>[0-9]*),(?<deletions>[0-9]*)$");
+
+
             string inputLine = Console.ReadLine();
 
             while (inputLine != "git push")
             {
-                Regex parts = new Regex(@"(?:^https\:\/\/github\.com\/)(?<ussername>[a-zA-z0-9-]+)\/(?<repoName>[\[a-zA-Z\-]+)\/(?<commit>commit)\/(?<hash>[a-fA-F0-9]{40})\,(?<message>.*[^\r\n]),(?<additions>\d+),(?<deletions>\d+)$");
-
                 var allParts = parts.Match(inputLine);
 
-                string userName = allParts.Groups["ussername"].Value;
-                string repoName = allParts.Groups["repoName"].Value;
-                string commit = allParts.Groups["commit"].Value;
-                string hash = allParts.Groups["hash"].Value;
-                string message = allParts.Groups["message"].Value;
-                string additions = allParts.Groups["additions"].Value;
-                string deletions = allParts.Groups["deletions"].Value;
-
-                Comites commitInfo = new Comites(hash, message, additions, deletions);
-
-                if (userName != string.Empty && repoName != string.Empty)
+                if (allParts.Success)
                 {
+
+                    string userName = allParts.Groups["ussername"].Value;
+                    string repoName = allParts.Groups["repoName"].Value;
+                    string hash = allParts.Groups["hash"].Value;
+                    string message = allParts.Groups["message"].Value;
+                    decimal additions = decimal.Parse(allParts.Groups["additions"].Value);
+                    decimal deletions = decimal.Parse(allParts.Groups["deletions"].Value);
+
+                    Comites commitInfo = new Comites(hash, message, additions, deletions);
+
                     if (!usersInfo.ContainsKey(userName))
                     {
                         usersInfo[userName] = new SortedDictionary<string, List<Comites>>();
@@ -56,30 +57,36 @@
                     {
                         usersInfo[userName][repoName] = new List<Comites>();
                     }
+
                     usersInfo[userName][repoName].Add(commitInfo);
                 }
+
                 inputLine = Console.ReadLine();
             }
+
 
             foreach (var person in usersInfo)
             {
                 Console.WriteLine($"{person.Key}:");
-                decimal totalAdditions = 0;
-                decimal totalDeletions = 0;
 
                 foreach (var repo in person.Value)
                 {
-                    Console.WriteLine($"  {repo.Key}:");
+                    Console.WriteLine($"{repo.Key}:");
+
+                    decimal totalAdditions = 0m;
+                    decimal totalDeletions = 0m;
 
                     foreach (var commit in repo.Value)
                     {
-                        Console.WriteLine($"    commit {commit.Hash}: {commit.Message} ({commit.Additions} additions, {commit.Deletions} deletions)");
+                        totalAdditions += commit.Additions;
+                        totalDeletions += commit.Deletions;
 
-                        totalAdditions += decimal.Parse(commit.Additions);
-                        totalDeletions += decimal.Parse(commit.Deletions);
+                        Console.WriteLine($"commit {commit.Hash}: {commit.Message} ({commit.Additions} additions, {commit.Deletions} deletions)");
                     }
 
-                    Console.WriteLine($"    Total: {totalAdditions} additions, {totalDeletions} deletions");
+                    Console.WriteLine($"Total: {totalAdditions} additions, {totalDeletions} deletions");
+
+
                 }
             }
         }
