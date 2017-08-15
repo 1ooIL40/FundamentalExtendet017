@@ -20,7 +20,7 @@
                 string inputLine = Console.ReadLine();
                 var match = pattertn.Match(inputLine);
 
-                string path = match.Groups["path"].Value;
+                string path = match.Groups["path"].Value.Split('\\')[0];
                 string fileAndExtention = match.Groups["file"].Value;
                 decimal size = decimal.Parse(match.Groups["size"].Value);
 
@@ -41,37 +41,23 @@
             string root = tokens[2];
             string file = tokens[0];
 
-            Dictionary<string, decimal> result = new Dictionary<string, decimal>();
-
-            foreach (var path in dirAndFiles)
+            if (dirAndFiles.ContainsKey(root))
             {
-                if (path.Key.Contains(root))
+                foreach (var files in dirAndFiles[root]
+                    .OrderByDescending(x => x.Value)
+                    .ThenBy(x => x.Key))
                 {
-                    foreach (var files in path.Value)
+                    string fileName = files.Key;
+                    if (fileName.EndsWith(file))
                     {
-                        result[files.Key] = files.Value;
+                        Console.WriteLine($"{fileName} - {files.Value} KB ");
                     }
-                }
-            }
-
-            result = result
-                .OrderByDescending(v=>v.Value)
-                .ThenBy(k=>k.Key)
-                .Where(k => k.Key.Contains(file))
-                .ToDictionary(k => k.Key, v => v.Value);
-
-            if(result.Count != 0)
-            {
-                foreach (var output in result)
-                {
-                    Console.WriteLine($"{output.Key} - {output.Value} KB ");
                 }
             }
             else
             {
                 Console.WriteLine("No");
-            }
-            
+            } 
         }
     }
 }
